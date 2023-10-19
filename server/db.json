@@ -22,8 +22,11 @@
   "budgets": [
     {
       "id": 1,
-      "name": "vacation",
-      "amount": 5000
+      "title": "vacation",
+      "amount": 5000,
+      "start_date": "",
+      "end_date": "",
+      "active": true
     }
   ]
 }

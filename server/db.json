@@ -1,0 +1,29 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Alex Hales",
+      "email": "alex@gmail.com",
+      "password": "Alex@1"
+    },
+    {
+      "id": 2,
+      "name": "Ricky Ponting",
+      "email": "ricky@gmail.com",
+      "password": "Ricky@1"
+    },
+    {
+      "id": 1,
+      "name": "Stuart Broad",
+      "email": "stuart@gmail.com",
+      "password": "Stuart@1"
+    }
+  ],
+  "budgets": [
+    {
+      "id": 1,
+      "name": "vacation",
+      "amount": 5000
+    }
+  ]
+}

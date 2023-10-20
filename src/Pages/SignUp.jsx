@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from "react";
-// import "./login.css";
+import "./SignUp_Login.css";
 import { signup } from "../Redux/Reducers/AuthReducer/action";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router-dom/dist";
+import { Navigate,Link } from "react-router-dom/dist";
 import Loading from "../Components/Loading";
 
 export const SignUp = () => {
@@ -35,9 +35,9 @@ export const SignUp = () => {
  if(state.isAuth) return <Loading/>
 
   return (
-    <div >
-      <div className="card">
-        <h4 className="title">Sign Up</h4>
+    <div className='container'>
+      <div className="card" style={{height:'530px'}}>
+        <h4 className="title">SIGN UP</h4>
         <form onSubmit={handleSubmit}>
 
         <div className="field">
@@ -80,6 +80,8 @@ export const SignUp = () => {
             SignUP
           </button>
         </form>
+
+        <p className="para">Already Existing Customer <Link className="link" to='/login'>Login</Link></p>
       </div>
     </div>
   );

@@ -2,8 +2,9 @@ import React,{useState,useEffect} from "react";
 // import "./login.css";
 import { login } from "../Redux/Reducers/AuthReducer/action";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router-dom/dist";
+import { Link, Navigate } from "react-router-dom/dist";
 import Loading from "../Components/Loading";
+import { SymbolDisplayPartKind } from "typescript";
 
 export const Login = () => {
   
@@ -35,9 +36,9 @@ export const Login = () => {
  if(state.isAuth) return <Loading/>
 
   return (
-    <div style={{marginTop:'100px'}}>
+    <div className='container'>
       <div className="card">
-        <h4 className="title">LogIn</h4>
+        <h4 className="title">LOGIN</h4>
         <form onSubmit={handleSubmit}>
           <div className="field">
            
@@ -65,6 +66,9 @@ export const Login = () => {
             Login
           </button>
         </form>
+      
+      <p className="para">New Customer <Link className="link" to='/signup'>Sign Up</Link></p>
+
       </div>
     </div>
   );

@@ -1,0 +1,35 @@
+.addBudgetForm {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  gap: 1em;
+  padding: 2em;
+  margin-left: 30%;
+  margin-top: 13%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.addBudgetForm > label {
+  display: flex;
+  flex-direction: column;
+}
+
+.addBudgetForm input {
+  padding: 0.5em;
+  font-size: 1em;
+  margin-top: 0.5em;
+  width: 95%;
+}
+
+.addBudgetForm > button {
+  text-align: center;
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 1em;
+  border: none;
+  color: white;
+  background-color: #1510db;
+  cursor: pointer;
+}

@@ -1,0 +1,15 @@
+#budgetHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 7em;
+}
+.addBudgetBtn {
+  color: #1510db;
+  font-size: 1em;
+  font-weight: bolder;
+  background-color: rgb(241, 240, 240);
+  border: none;
+  padding: 1em;
+  border-radius: 2em;
+  cursor: pointer;
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import axios from "axios";
+import styles from "./index.module.css";
 
 import "react-datepicker/dist/react-datepicker.css";
 const AddBudget = () => {
@@ -9,8 +10,15 @@ const AddBudget = () => {
     amount: "",
     start_date: null,
     end_date: null,
-    active: false,
   });
+  const clearForm = () => {
+    setBudget({
+      title: "",
+      amount: "",
+      start_date: null,
+      end_date: null,
+    });
+  };
   const handleChange = ({ target: { name, value } }) => {
     setBudget({ ...budget, [name]: value });
   };
@@ -23,19 +31,26 @@ const AddBudget = () => {
     try {
       const res = await axios.post(
         "https://spendwise-239r.onrender.com/budgets",
-        budget
+        { ...budget, active: false, consumed: 0 }
       );
       console.log(res);
     } catch (error) {
       console.error(error);
     }
+    clearForm();
   };
   const { title, amount, start_date, end_date } = budget;
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.addBudgetForm} onSubmit={handleSubmit}>
       <label htmlFor="title">
         Budget Category
-        <input type="text" name="title" value={title} onChange={handleChange} />
+        <input
+          type="text"
+          name="title"
+          value={title}
+          onChange={handleChange}
+          placeholder="Enter Budget"
+        />
       </label>
       <label htmlFor="duration">
         Duration
@@ -45,6 +60,7 @@ const AddBudget = () => {
           startDate={start_date}
           endDate={end_date}
           onChange={updateDuration}
+          placeholderText="Select Date Range"
         />
       </label>
       <label htmlFor="amount">
@@ -54,6 +70,7 @@ const AddBudget = () => {
           name="amount"
           value={amount}
           onChange={handleChange}
+          placeholder="Enter Amount"
         />
       </label>
       <button type="submit">Confirm Budget</button>

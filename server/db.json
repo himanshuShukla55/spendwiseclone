@@ -24,6 +24,7 @@
       "id": 1,
       "title": "vacation",
       "amount": 5000,
+      "consumed": 0,
       "start_date": "",
       "end_date": "",
       "active": true

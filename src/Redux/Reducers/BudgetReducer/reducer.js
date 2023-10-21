@@ -1,5 +1,4 @@
-const initialState={
-    budget:''
-}
-
-export const reducer=(state=initialState,payload)=>{}
+const initialState = {};
+export const reducer = (state = initialState, action) => {
+  return state;
+};

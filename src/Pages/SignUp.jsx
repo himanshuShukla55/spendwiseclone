@@ -32,7 +32,7 @@ export const SignUp = () => {
   return <Navigate to='/'/>
  }
 
- if(state.isAuth) return <Loading/>
+ if(state.loading) return <Loading/>
 
   return (
     <div className='container'>

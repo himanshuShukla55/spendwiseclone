@@ -1,0 +1,22 @@
+.progressBar {
+  min-height: 1em;
+  background-color: #ebebef;
+  width: 99%;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5em;
+}
+.bar {
+  min-height: 1em;
+  border: none;
+  border-radius: 0.5em;
+}
+.green {
+  background-color: #95cc0d;
+}
+.orange {
+  background-color: #f38710;
+}
+.red {
+  background-color: #c75022;
+}

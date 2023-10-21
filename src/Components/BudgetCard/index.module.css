@@ -1,0 +1,25 @@
+.budgetCard {
+  background-color: #fffefe;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 0.5em;
+  width: 80%;
+  margin-left: 7%;
+}
+.budgetCardDetails {
+  display: flex;
+  justify-content: space-between;
+}
+.budgetCardDetails > div > * {
+  margin: 0;
+  padding: 0;
+}
+.consumedAndRemaining {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+.fadedText {
+  color: rgb(159, 157, 157);
+}

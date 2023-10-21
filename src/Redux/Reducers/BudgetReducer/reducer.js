@@ -39,3 +39,14 @@ export const getBudgets = async (dispatch) => {
     dispatch(getBudgetsFailed(error));
   }
 };
+
+export const updateBudget = async (budget) => {
+  try {
+    await axios.patch(
+      `https://spendwise-239r.onrender.com/budgets/${budget.id}`,
+      budget
+    );
+  } catch (error) {
+    console.error(error);
+  }
+};

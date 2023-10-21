@@ -21,13 +21,31 @@
   ],
   "budgets": [
     {
-      "id": 1,
-      "title": "vacation",
-      "amount": 5000,
-      "consumed": 0,
-      "start_date": "",
-      "end_date": "",
-      "active": true
+      "title": "Food",
+      "amount": 10000,
+      "start_date": "2023-09-30T18:30:00.000Z",
+      "end_date": "2023-10-30T18:30:00.000Z",
+      "active": false,
+      "consumed": 3000,
+      "id": 1
+    },
+    {
+      "title": "Travel",
+      "amount": 3000,
+      "start_date": "2023-09-30T18:30:00.000Z",
+      "end_date": "2023-10-30T18:30:00.000Z",
+      "active": false,
+      "consumed": 2000,
+      "id": 2
+    },
+    {
+      "title": "Education",
+      "amount": 50000,
+      "start_date": "2023-09-30T18:30:00.000Z",
+      "end_date": "2023-10-30T18:30:00.000Z",
+      "active": false,
+      "consumed": 26000,
+      "id": 1
     }
   ]
 }

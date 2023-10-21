@@ -4,6 +4,7 @@ import axios from "axios";
 import styles from "./index.module.css";
 
 import "react-datepicker/dist/react-datepicker.css";
+import { useNavigate } from "react-router-dom";
 const AddBudget = () => {
   const [budget, setBudget] = useState({
     title: "",
@@ -11,6 +12,7 @@ const AddBudget = () => {
     start_date: null,
     end_date: null,
   });
+  const navigate = useNavigate();
   const clearForm = () => {
     setBudget({
       title: "",
@@ -38,6 +40,7 @@ const AddBudget = () => {
       console.error(error);
     }
     clearForm();
+    navigate("/budget");
   };
   const { title, amount, start_date, end_date } = budget;
   return (

@@ -1,0 +1,23 @@
+#pleaseLogin {
+  background-color: #1410d3;
+  padding: 2em;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+#pleaseLogin > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+#pleaseLogin > a:hover {
+  border-bottom: 1px solid white;
+}
+#welcome {
+  background-color: #1410d3;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  font-size: 2em;
+  color: white;
+}

@@ -21,3 +21,24 @@
   font-size: 2em;
   color: white;
 }
+#buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  padding: 1em;
+  margin-top: 1em;
+}
+.homePageButtons {
+  font-size: 2em;
+  padding: 0.5em;
+  background-color: #1410d3;
+  color: white;
+  border: none;
+  border-radius: 1em;
+  padding: 1em;
+  cursor: pointer;
+  transition: transform 400ms;
+}
+.homePageButtons:hover {
+  transform: translateY(-10px);
+}

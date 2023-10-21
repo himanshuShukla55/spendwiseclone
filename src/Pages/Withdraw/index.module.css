@@ -1,0 +1,31 @@
+#withdrawForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 2em 0;
+  padding-right: 5em;
+  margin-top: 10%;
+  gap: 1em;
+  margin-left: 35%;
+  width: 35%;
+  background-color: #1410d4;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#withdrawForm > label {
+  display: flex;
+  flex-direction: column;
+}
+
+#withdrawForm > label > span {
+  margin: 0.5em;
+  color: white;
+}
+
+#withdrawForm input,
+#withdrawForm select,
+#withdrawForm button {
+  font-size: 1em;
+  padding: 1em;
+  border: none;
+}

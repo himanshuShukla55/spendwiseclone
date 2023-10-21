@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getBudgets } from "../Redux/Reducers/BudgetReducer/reducer";
 import styles from "./Home.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const { isAuth, name } = useSelector((store) => store.authState);
   const { budgets } = useSelector((store) => store.budgetState);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   useEffect(() => {
     getBudgets(dispatch);
@@ -24,6 +25,27 @@ export const Home = () => {
           Please <Link to="/login">Login</Link> to view your wallet details
         </div>
       )}
+      <div id={styles.buttonsContainer}>
+        {isAuth && (
+          <>
+            <button className={styles.homePageButtons}>
+              Transaction History
+            </button>
+            <button
+              className={styles.homePageButtons}
+              onClick={() => navigate("/withdraw")}
+            >
+              Withdraw
+            </button>
+          </>
+        )}
+        <button
+          className={styles.homePageButtons}
+          onClick={() => navigate("/add-budget")}
+        >
+          Add Budget
+        </button>
+      </div>
     </>
   );
 };

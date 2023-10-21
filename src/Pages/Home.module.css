@@ -1,0 +1,44 @@
+#pleaseLogin {
+  background-color: #1410d3;
+  padding: 2em;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+#pleaseLogin > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+#pleaseLogin > a:hover {
+  border-bottom: 1px solid white;
+}
+#welcome {
+  background-color: #1410d3;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  font-size: 2em;
+  color: white;
+}
+#buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  padding: 1em;
+  margin-top: 1em;
+}
+.homePageButtons {
+  font-size: 2em;
+  padding: 0.5em;
+  background-color: #1410d3;
+  color: white;
+  border: none;
+  border-radius: 1em;
+  padding: 1em;
+  cursor: pointer;
+  transition: transform 400ms;
+}
+.homePageButtons:hover {
+  transform: translateY(-10px);
+}

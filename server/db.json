@@ -45,7 +45,8 @@
       "end_date": "2023-10-30T18:30:00.000Z",
       "active": false,
       "consumed": 26000,
-      "id": 1
+      "id": 3
     }
-  ]
+  ],
+  "transactions": []
 }

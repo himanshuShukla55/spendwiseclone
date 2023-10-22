@@ -7,6 +7,7 @@ import Budgets from "../Pages/Budgets/index";
 import AddBudget from "../Pages/AddBudget";
 import { SignUp } from "../Pages/SignUp";
 import Withdraw from "../Pages/Withdraw";
+import Transactions from "../Pages/Transactions";
 
 export const AllRoutes = () => {
   return (
@@ -36,6 +37,14 @@ export const AllRoutes = () => {
           element={
             <PrivateRoute>
               <Withdraw />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/transactions"
+          element={
+            <PrivateRoute>
+              <Transactions />
             </PrivateRoute>
           }
         />

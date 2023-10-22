@@ -33,7 +33,7 @@ const AddBudget = () => {
     try {
       const res = await axios.post(
         "https://spendwise-239r.onrender.com/budgets",
-        { ...budget, active: false, consumed: 0 }
+        { ...budget, active: false, consumed: 0, amount: +budget.amount }
       );
       console.log(res);
     } catch (error) {

@@ -28,7 +28,10 @@ export const Home = () => {
       <div id={styles.buttonsContainer}>
         {isAuth && (
           <>
-            <button className={styles.homePageButtons}>
+            <button
+              className={styles.homePageButtons}
+              onClick={() => navigate("/transactions")}
+            >
               Transaction History
             </button>
             <button

@@ -1,0 +1,19 @@
+.transactionCard {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2em;
+  margin: 2em;
+  border: none;
+  border-radius: 1em;
+}
+.transactionInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.transactionInfo > div > * {
+  margin: 0.5em;
+}
+.transactionTime {
+  margin-bottom: 1em;
+  float: right;
+  color: rgb(189, 187, 187);
+}

@@ -3,14 +3,20 @@ import { useDispatch, useSelector } from "react-redux";
 import sytles from "./index.module.css";
 import { updateBudget } from "../../Redux/Reducers/BudgetReducer/reducer";
 import { addTransaction } from "../../Redux/Reducers/TransactionReducer/Action";
+import { useNavigate } from "react-router-dom";
 
 const Withdraw = () => {
   const { budgets } = useSelector((store) => store.budgetState);
   const [budgetID, setBudgetID] = useState(0);
   const [amount_withdrawn, setAmountWithDrawn] = useState("");
   const [maxAmount, setMaxAmount] = useState();
-  const handleBudgetChange = ({ target: { value } }) => setBudgetID(value);
   const budget = useRef();
+  const navigate = useNavigate();
+
+  const handleBudgetChange = ({ target: { value } }) => {
+    setBudgetID(value);
+    setAmountWithDrawn("");
+  };
   useEffect(() => {
     budget.current = budgets.filter((item) => item.id === +budgetID)[0];
     setMaxAmount(budget.current?.amount - budget.current?.consumed);
@@ -26,12 +32,13 @@ const Withdraw = () => {
       ...budget.current,
       consumed: budget.current?.consumed + +amount_withdrawn,
     });
-    addTransaction({
+    await addTransaction({
       title: `₹${amount_withdrawn} withdrawn from ${budget.current?.title}`,
       budget_title: budget.current?.title,
       amount: amount_withdrawn,
       time: new Date(),
     });
+    navigate("/transactions");
   };
   return (
     <form id={sytles.withdrawForm} onSubmit={handleSubmit}>

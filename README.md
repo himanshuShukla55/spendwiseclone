@@ -1,18 +1,17 @@
-**App Structure**
-src
-  1. Redux
-     1.1 Store
-     1.2 AuthReducer
-     1.3 BudgerReducer
-  2. Routes
-  3. Pages
-     3.1 Home
-     3.2 Budget
-     3.3 Login/signup
-  4. Components
-     4.1 Navbar
-     4.2 Loading
-     4.3 BudgetCard
+# Spendwise
 
-**JSON Server URL**
-https://spendwise-239r.onrender.com/
+## Description
+A React app to manage budget.
+Users can perform the following opertaions:
+
+- Signup/Login using email and password.
+- Create a Budget.
+- Withdraw amount from the budget.
+- Check status of the Budget.
+- View Transaction History
+
+## Tech Stack
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,nodejs,react,redux)](https://skillicons.dev)
+
+##Live At
+https://tranquil-cassata-b9de0d.netlify.app/
